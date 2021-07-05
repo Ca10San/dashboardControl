@@ -1,0 +1,16 @@
+& > div.sideContent {
+  grid-area: sideContent;
+
+  display: flex;
+  flex-direction: row;
+
+  overflow: scroll;
+
+  @media (max-width: $mobile-screen) {
+    flex-direction: column;
+    
+    width: 100vw;
+    height: 9vh;
+    overflow: hidden;
+  }
+}

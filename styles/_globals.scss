@@ -1,0 +1,53 @@
+$primary: #a100f2;
+$primary-light: #d851ff;
+$primary-dark: #6a00be;
+
+$secondary: #2d00f7;
+$secondary-light: #7c42ff;
+$secondary-dark: #0000c2;
+
+$text-dark: #000000;
+$text-secondary-dark: #2c2c2c;
+$text-light: #ffffff;
+
+$shadow: #a8a8a8;
+
+$background-light: #ffffff;
+$background-secondary-light: #e0e0e0;
+
+$mobile-screen: 769px;
+$desktop-screen: 770px;
+
+@import "skeleton/index";
+@import "components/index";
+
+@import "pages/index";
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}

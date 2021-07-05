@@ -1,0 +1,69 @@
+& > div.menuDashboard {
+  width: 100%;
+  margin-top: 7vh;
+
+  display: grid;
+  grid-template-areas:
+    "activeUser button"
+    "menu menu";
+
+  margin-bottom: 10px;
+
+  & > a.activeUser {
+    grid-area: activeUser;
+    width: 100%;
+
+		display: flex;
+		flex-direction: row;
+
+		& > span.userInfo {
+			color: white;
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+		}
+
+		& > span.activeUserImage {
+      align-self: flex-start;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			& > img {
+				height: 50px;
+        padding: 5px;
+        margin: 5px;
+
+				border-radius: 45px;
+				background-color: white;
+			}
+		}
+	}
+
+  & > label.menuButtonLabel {
+    grid-area: button;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > img {
+      height: 30px;
+      border-radius: 45px;
+      background-color: white;
+      margin-right: 10px;
+    }
+  }
+
+  & > div.menuButtons {
+    grid-area: menu;
+
+    display: none;
+  }
+
+  input#menuState:checked ~ div.menuButtons {
+    display: flex;
+    flex-direction: column;
+  }
+}

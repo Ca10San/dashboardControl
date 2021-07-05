@@ -1,0 +1,147 @@
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid $primary-light;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid $primary;
+  outline: 0;
+}
+
+input[type="email"]:not(:placeholder-shown):focus,
+input[type="number"]:not(:placeholder-shown):focus,
+input[type="search"]:not(:placeholder-shown):focus,
+input[type="text"]:not(:placeholder-shown):focus,
+input[type="tel"]:not(:placeholder-shown):focus,
+input[type="url"]:not(:placeholder-shown):focus,
+input[type="password"]:not(:placeholder-shown):focus,
+textarea:not(:placeholder-shown):focus,
+select:not(:placeholder-shown):focus {
+  border: 2px solid $primary-dark;
+  outline: 0;
+  @extend %elevation-1;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+fieldset {
+  padding: 10px;
+  border-width: 1px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  & > span {
+    display: inline-block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 25px;
+    width: 25px;
+    border: 1px solid $primary;
+    border-radius: 4px;
+
+    background-color: transparent;
+    transition: 0.3s all;
+  }
+
+  &.checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    padding-top: 3px;
+    padding-left: 35px;
+    font-weight: normal;
+    position: relative;
+
+    & > input[type="checkbox"]:checked ~ span {
+      background-color: $primary-dark;
+      border: 1px solid $primary-dark;
+    }
+  }
+
+  &.radio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    padding-top: 3px;
+    padding-left: 35px;
+    font-weight: normal;
+    position: relative;
+
+    & > span {
+      border-radius: 25px;
+    }
+
+    & > input[type="radio"]:checked ~ span {
+      background-color: $primary-dark;
+      border: 1px solid $primary-dark;
+    }
+  }
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+ 
+  position: absolute; 
+  margin-top: 30%;
+  margin-left: 30%;
+  border-radius: 8px;
+  padding: 24px;
+  width: 400px;
+  background-color: $background-light;
+
+  @extend %elevation-1;
+}

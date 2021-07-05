@@ -1,0 +1,46 @@
+div.adsPanel {
+	width: 100%;
+	height: 100%;
+
+	& > a {
+		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 15px;
+		background-color: white;
+
+		display: grid;
+		grid-template-areas: "picture headline";
+		justify-content: center;
+		align-content: center;
+
+		@extend %elevation-1;
+
+		& > img {
+			grid-area: picture;
+			height: 50px;
+			background-color: gray;
+			margin-top: 3px;
+			margin-left: -20px;
+			border-radius: 15px;
+		}
+
+		& > span {
+			grid-area: headline;
+			margin-top: 5px;
+			margin-left: 5px;
+			width: 150px;
+			padding: 2px;
+			font-size: 10px;
+
+			box-sizing: border-box;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	@media (max-width: $mobile-screen) {
+		& > a {
+				border-radius: 0;
+				height: 100%;
+		}
+	}
+}

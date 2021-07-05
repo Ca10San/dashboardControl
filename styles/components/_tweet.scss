@@ -1,0 +1,91 @@
+/* Tweets
+--------------------------------------------------*/
+
+.tweet {
+  border-radius: 8px;
+  background-color: $background-light;
+  padding: 10px;
+  margin: 10px;
+
+  @extend %elevation-1;
+
+  & > .optionsButton {
+    display: inline;
+    margin-right: 10px;
+    align-items: center;
+    float: right;
+    padding: 0;
+    border: 1px solid $primary;
+    border-radius: 50px;
+    height: 27px;
+    width: 27px;
+    transition: all 0.3s;
+    background-color: $background-light;
+
+    & > .optionsSVG {
+      align-self: center;
+      display: block;
+      fill: $primary;
+      margin: 0;
+      padding: 0;
+      path {
+        fill: $primary;
+      }
+      background-color: transparent;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      & > .optionsSVG {
+        path {
+          fill: $text-light;
+        }
+      }
+    }
+  }
+
+  & > .list {
+    float: right;
+    z-index: 1;
+    position: relative;
+    display: none;
+  }
+
+  & > input[type="checkbox"]:checked ~ .list {
+    display: block;
+  }
+
+  & > .userName {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  & > .userAdress {
+    font-size: 11px;
+    font-weight: 300;
+    margin-left: 20px;
+
+    color: $primary;
+  }
+
+  & > .tweetContent {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  & > .likes {
+    display: inline;
+    position: relative;
+    left: 90%;
+    z-index: 0;
+    font-weight: 900;
+
+    & > .likesNumber {
+      color: $primary;
+      margin-right: 10px;
+    }
+  }
+}

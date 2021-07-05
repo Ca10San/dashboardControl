@@ -1,0 +1,28 @@
+div.dashboard {
+	background-color: $primary;
+	width: 100vw;
+	height: 100vh;
+	
+	@media (max-width: $mobile-screen) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@import "mobile/index";
+	}
+
+	@media (min-width: $desktop-screen) {
+		display: grid;
+		align-items: center;
+		text-align: center;
+
+		grid-template-areas: 
+			"topbar topbar topbar"
+			"menu timeline sideContent"
+			"menu timeline sideContent";
+		grid-template-columns: 20vw 60vw 20vw;
+		grid-template-rows: 7vh 93vh;
+
+		@import "desktop/index";
+	}
+}

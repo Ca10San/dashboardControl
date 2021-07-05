@@ -1,0 +1,50 @@
+div.recommendationsPanel {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 15px;
+	overflow-y: scroll;
+
+	@extend %elevation-1;
+
+	& > div {
+		width: 90%;
+		height: 70px;
+		border-radius: 15px;
+		margin-left: 5%;
+		margin-bottom: 10px;
+
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		grid-template-areas:
+			"picture username"
+			"picture usertag";
+
+		& > img {
+			grid-area: picture;
+
+			height: 45px;
+			padding: 5px;
+			border-radius: 45px;
+			margin-right: 10px;
+			@extend %elevation-1;
+		}
+
+		& > span {
+			grid-area: username;
+			align-self: end;
+			margin-bottom: -10px;
+			font-size: 20px;
+		}
+
+		& > small {
+			grid-area: usertag;
+			align-self: baseline;
+		}
+	}
+
+	@media (max-width: $mobile-screen) {
+		border-radius: 0;
+	}
+}

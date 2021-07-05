@@ -1,0 +1,72 @@
+/* Cards
+-------------------------------------------------- */
+.card {
+  width: 80%;
+  border-radius: 0.8em;
+  background-color: #fff;
+  color: $text-dark;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
+
+  & > .wrapper {
+    padding: 16px;
+
+    & > hr {
+      border: 1.5px solid $shadow;
+    }
+
+    & > label {
+      font-weight: 300;
+    }
+  }
+
+  & > .confirmationButton {
+    text-align: center;
+    background-color: $background-secondary-light;
+    border-radius: 0 0 8px 8px;
+
+    & > label {
+      color: $text-secondary-dark;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+
+  & > h5 {
+    display: inline-block;
+    padding: 16px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+
+    & ~ hr {
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+  }
+
+  & > button.closeCardButton {
+    float: right;
+    margin: 16px;
+    display: inline;
+    background-color: $text-light;
+    border-radius: 45px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    padding: 0;
+    transition: all 0.3s;
+
+    & > .closeCardSVG {
+      height: 15px;
+      padding: 1px;
+      fill: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      & > .closeCardSVG {
+        fill: $text-light;
+      }
+    }
+  }
+}

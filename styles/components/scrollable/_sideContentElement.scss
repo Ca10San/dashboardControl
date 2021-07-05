@@ -1,0 +1,28 @@
+@keyframes sideContentAnimation {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(0); }
+	55% { transform: translateY(-9vh); }
+	100% { transform: translateY(-9vh); }
+}
+
+div.sideContentElement {
+	display: block;
+	height: 40vh;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-left: 10%;
+
+	@media (max-width: $mobile-screen) {
+		height: 9vh;
+		width: 100%;
+
+		margin: 0;
+		margin-bottom: 1px;
+
+		animation-name: sideContentAnimation;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-direction: alternate;
+	}
+}
